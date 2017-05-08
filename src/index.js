@@ -8,9 +8,6 @@
 function returnFirstArgument(arg) {
     return arg;
 }
-var result = returnFirstArgument();
-console.log(result);
-
 /*
  Задание 2:
 
@@ -18,7 +15,7 @@ console.log(result);
  Значение по умолчанию второго аргумента должно быть 100
  */
 function defaultParameterValue(a, b) {
-    var b = b||100;
+    var b = b || 100;
     return a + b;
 }
 //var sum = defaultParameterValue();
@@ -48,10 +45,6 @@ function returnFnResult(fn) {
     }
     return internalFn;
 }
-
-var result = returnFnResult(10);
-var result2 = result(20);
-console.log(result2);
 
 /*
  Задание 5:
