@@ -40,10 +40,8 @@ function returnArgumentsArray() {
  Функция должна принимать другую функцию и возвращать результат вызова переданной функции
  */
 function returnFnResult(fn) {
-    function internalFn(fn2) {
-        return fn + fn2;
-    }
-    return internalFn;
+	var result = fn();
+    return result;
 }
 
 /*
@@ -52,7 +50,12 @@ function returnFnResult(fn) {
  Функция должна принимать число (значение по умолчанию - 0) и возвращать функцию (F)
  При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
  */
-function returnCounter(number) {
+function returnCounter(number = 0) {
+    var num = number ;
+    return function () {
+        num++;
+        return num;
+    }
 }
 
 /*
